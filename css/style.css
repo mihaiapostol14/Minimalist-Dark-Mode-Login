@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* --- Theme Variables --- */
+:root {
+  --primary-bg: url('../assets/image/background2.jpg');
+  --container-bg: rgba(255, 255, 255, 0.1); 
+
+  /* Text & UI Elements */
+  --text-main: #ffffff;
+  --text-dark: #333333;
+  --btn-bg: #ffffff;
+  --accent-color: #ffffff;
+
+  /* Glassmorphism Effects */
+  --border-glass: rgba(255, 255, 255, 0.2);
+  --shadow-light: rgba(0, 0, 0, 0.2);
+  --blur-amount: 10px;
+
+  /* Typography */
+  --body-font: 'Montserrat', sans-serif;
+}
+
+/* --- Global Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--primary-bg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* --- Layout --- */
+.wrapper {
+  width: 420px;
+  background: var(--container-bg);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount)); 
+  color: var(--text-main);
+  border: 2px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 0 20px var(--shadow-light);
+}
+
+.wrapper .form-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* --- Input Fields --- */
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 35px 0; 
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 2px solid var(--border-glass);
+  border-radius: 40px;
+  font-size: 16px;
+  color: var(--text-main);
+  padding: 0 45px 0 45px; 
+  transition: border-color 0.3s ease;
+}
+
+.input-box input:focus {
+  border-color: #ffffff;
+}
+
+.input-box input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Universal Icon Positioning */
+.input-box .user, 
+.input-box .lock {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  left: 20px;
+}
+
+/* Eye icon on the right */
+.input-box .eye {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+}
+
+/* Hint Text Positioning */
+.input-box .hint-text {
+  position: absolute;
+  bottom: -22px;
+  left: 20px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+}
+
+/* --- Links & Checkbox --- */
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: 14px 0 25px;
+}
+
+.remember-forgot .remember-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.remember-forgot .remember-label .checkbox {
+  accent-color: var(--accent-color);
+  margin-right: 6px;
+  width: 16px;
+  height: 16px;
+}
+
+.remember-forgot .forgot-link {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.remember-forgot .forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Button --- */
+.wrapper .btn-submit {
+  width: 100%;
+  height: 45px;
+  background: var(--btn-bg);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.wrapper .btn-submit:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper .btn-submit:active {
+  transform: translateY(0);
+}
+
+/* --- Footer Link --- */
+.wrapper .register-container {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.wrapper .register-container p {
+  color: var(--text-main);
+}
+
+.wrapper .register-container .register-link {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wrapper .register-container .register-link:hover {
+  text-decoration: underline;
+}
