@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="wrapper">
+  <form action="#" method="POST">
+    <h1 class="form-title">Login</h1>
+    
+    <div class="input-box">
+      <input class="username" type="text" placeholder="Username" required />
+      <i class="bx bxs-user user"></i>
+    </div>
+
+    <div class="input-box">
+      <input class="password" type="password" placeholder="Password" required />
+      <i class="bx bxs-lock-alt lock"></i>
+      <i class="bx bxs-hide eye"></i>
+      <p class="hint-text">Password must be 8 characters</p>
+    </div>
+
+    <div class="remember-forgot">
+      <label for="checkbox" class="remember-label">
+        <input class="checkbox" type="checkbox" id="checkbox"/> Remember me
+      </label>
+      <a href="#" class="forgot-link">Forgot Password?</a>
+    </div>
+
+    <button type="submit" class="btn-submit">Login</button>
+
+    <div class="register-container">
+      <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+    </div>
+  </form>
+</div>
+  </body>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/LoginValidator.js"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</html>
